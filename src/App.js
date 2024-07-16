@@ -32,7 +32,7 @@ function App() {
   }, []);
 
   const fetchIpInfo = async (query = "") => {
-    const apiKey = process.env.REAC_APP_API_KEY;
+    const apiKey = process.env.REACT_APP_API_KEY;
     const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${query}`;
     try {
       const response = await fetch(url);
