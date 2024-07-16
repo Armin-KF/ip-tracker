@@ -1,38 +1,367 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+html {
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#upper-part {
+  background-image: url("../public/images/pattern-bg-desktop.png");
+  padding: 150px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#info-bar {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  margin-top: -90px;
+  background-color: white;
+  z-index: 1;
+  width: 85vw;
+  height: 25vh;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#ip-p {
+  position: absolute;
+  color: hsl(0, 0%, 59%);
+  margin-bottom: 100px;
+  margin-left: 50px;
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#ip-h1 {
+  color: hsl(0, 0%, 17%);
+  margin-left: 50px;
+  margin-bottom: 20px;
+  font-family: "Rubik", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.line {
+  height: 110px;
+  width: 1px;
+  background-color: hsl(0, 0%, 59%);
+  position: absolute;
+  margin-left: 300px;
+}
+
+#location-p {
+  position: absolute;
+  color: hsl(0, 0%, 59%);
+  margin-left: 350px;
+  margin-bottom: 100px;
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#location-h1 {
+  position: absolute;
+  color: hsl(0, 0%, 17%);
+  margin-left: 350px;
+  margin-bottom: 10px;
+  font-family: "Rubik", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  width: calc(30% - 200px);
+  white-space: normal;
+}
+
+.line-2 {
+  height: 110px;
+  width: 1px;
+  background-color: hsl(0, 0%, 59%);
+  position: absolute;
+  margin-left: 600px;
+}
+
+#timezone-p {
+  position: absolute;
+  color: hsl(0, 0%, 59%);
+  margin-left: 650px;
+  margin-bottom: 100px;
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#timezone-h1 {
+  position: absolute;
+  color: hsl(0, 0%, 17%);
+  margin-left: 650px;
+  margin-bottom: 10px;
+  font-family: "Rubik", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  width: calc(50% - 250px);
+  white-space: normal;
+}
+
+.line-3 {
+  height: 110px;
+  width: 1px;
+  background-color: hsl(0, 0%, 59%);
+  position: absolute;
+  margin-left: 900px;
+}
+
+#isp-p {
+  position: absolute;
+  color: hsl(0, 0%, 59%);
+  margin-left: 950px;
+  margin-bottom: 100px;
+  font-family: "Rubik", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#isp-h1 {
+  position: absolute;
+  color: hsl(0, 0%, 17%);
+  margin-left: 950px;
+  margin-bottom: 10px;
+  font-family: "Rubik", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  width: calc(70% - 300px);
+  white-space: normal;
+}
+
+#search-bar {
+  position: absolute;
+  margin-left: 330px;
+  margin-top: -40px;
+  width: 500px;
+  height: 50px;
+  padding-left: 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#submit-btn {
+  position: absolute;
+  margin-left: 800px;
+  margin-top: -40px;
+  width: 60px;
+  height: 53px;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  background-color: hsl(0, 0%, 17%);
   color: white;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+#search-bar:focus {
+  outline: none;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#title {
+  position: absolute;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: -115px;
+  margin-left: 415px;
+}
+
+@media screen and (max-width: 475px) {
+  #upper-part {
+    padding: 170px;
   }
-  to {
-    transform: rotate(360deg);
+
+  #info-bar {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    height: 30vh;
+    margin-right: 15px;
+  }
+
+  #ip-p {
+    margin-left: -5px;
+    margin-bottom: 50px;
+    font-size: 14px;
+  }
+
+  #ip-h1 {
+    margin-left: -5px;
+    margin-top: 35px;
+    font-size: 18px;
+  }
+
+  .line,
+  .line-2,
+  .line-3 {
+    display: none;
+  }
+
+  #location-p {
+    margin-left: -5px;
+    margin-top: 70px;
+    font-size: 14px;
+  }
+
+  #location-h1 {
+    margin-left: -130px;
+    margin-top: 90px;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  #timezone-p {
+    margin-left: -5px;
+    margin-top: 125px;
+    font-size: 14px;
+  }
+
+  #timezone-h1 {
+    margin-left: -105px;
+    margin-top: 150px;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  #isp-p {
+    margin-left: -5px;
+    margin-top: 180px;
+    font-size: 14px;
+  }
+
+  #isp-h1 {
+    margin-left: -70px;
+    margin-top: 205px;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  #search-bar {
+    margin-left: -130px;
+    margin-top: -20px;
+    width: 270px;
+    height: 60px;
+  }
+
+  #submit-btn {
+    margin-left: 155px;
+    margin-top: -18.5px;
+    width: 60px;
+    height: 60px;
+  }
+
+  #title {
+    margin-top: -100px;
+    margin-left: -100px;
+    font-size: 30px;
+    white-space: nowrap;
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #upper-part {
+    padding: 130px;
+  }
+
+  #info-bar {
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    height: 40vh;
+    margin-right: 15px;
+  }
+
+  #ip-p {
+    margin-left: 0;
+    margin-bottom: 50px;
+    font-size: 14px;
+  }
+
+  #ip-h1 {
+    margin-left: 0;
+    margin-top: 35px;
+    font-size: 18px;
+  }
+
+  .line,
+  .line-2,
+  .line-3 {
+    display: none;
+  }
+
+  #location-p {
+    margin-left: 0;
+    margin-top: 70px;
+    font-size: 14px;
+  }
+
+  #location-h1 {
+    margin-left: -125px;
+    margin-top: 90px;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  #timezone-p {
+    margin-left: 0;
+    margin-top: 125px;
+    font-size: 14px;
+  }
+
+  #timezone-h1 {
+    margin-left: -100px;
+    margin-top: 150px;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  #isp-p {
+    margin-left: 0;
+    margin-top: 180px;
+    font-size: 14px;
+  }
+
+  #isp-h1 {
+    margin-left: -65px;
+    margin-top: 205px;
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  #search-bar {
+    margin-left: -95px;
+    margin-top: -50px;
+    width: 250px;
+    height: 50px;
+  }
+
+  #submit-btn {
+    margin-left: 156px;
+    margin-top: -50px;
+    width: 60px;
+    height: 53px;
+  }
+
+  #title {
+    margin-top: -100px;
+    margin-left: -30px;
+    font-size: 30px;
+    white-space: nowrap;
+    font-size: 24px;
   }
 }
