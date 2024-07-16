@@ -8,7 +8,7 @@ This is a solution to the [IP address tracker challenge on Frontend Mentor](http
 
 ## Built With
 
-- **[React](https://reactjs.org/)** -
+- **[React](https://reactjs.org/)**
 
 ## What I Learned
 
