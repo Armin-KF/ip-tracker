@@ -115,9 +115,7 @@ function App() {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
-            <Marker position={[ipInfo.lat, ipInfo.lng]}>
-              <Popup>{ipInfo.location}</Popup>
-            </Marker>
+
             <UpdateMapCenter lat={ipInfo.lat} lng={ipInfo.lng} />
           </MapContainer>
         </div>

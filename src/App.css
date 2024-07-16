@@ -340,7 +340,7 @@ html {
     margin-left: -65px;
     margin-top: 205px;
     font-size: 18px;
-    white-space: nowrap;
+    white-space: normal;
   }
 
   #search-bar {
@@ -351,15 +351,15 @@ html {
   }
 
   #submit-btn {
-    margin-left: 156px;
-    margin-top: -50px;
+    margin-left: 160px;
+    margin-top: -49px;
     width: 60px;
     height: 53px;
   }
 
   #title {
     margin-top: -100px;
-    margin-left: -30px;
+    margin-left: -40px;
     font-size: 30px;
     white-space: nowrap;
     font-size: 24px;
